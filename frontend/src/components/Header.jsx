@@ -67,7 +67,7 @@ export default function Header() {
       const token = localStorage.getItem('authToken');
       if (!token) return;
 
-      await axios.post('http://localhost:5000/api/auth/logout', {}, {
+      await axios.post('https://finance-tracking-application.onrender.com/api/auth/logout', {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
